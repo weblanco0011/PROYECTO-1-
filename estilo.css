@@ -142,7 +142,8 @@ a:hover {
 /* Tablets */
 @media (max-width: 992px) {
   .header-content {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
   }
@@ -222,3 +223,4 @@ a:hover {
     margin: 5px 0;
   }
 }
+
