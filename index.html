@@ -202,9 +202,20 @@
         });
       });
     });
-  </script>
+</script>
+<script>
+  // Botón hamburguesa
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
 </body>
 
 
 </html>
+
 
