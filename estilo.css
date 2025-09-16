@@ -226,16 +226,22 @@ a:hover {
     font-size: 1.2rem;
   }
 
- nav ul {
-   width: 220px; 
-   right: 20px;   
-   left: auto;   
-   top: 70px;
- }
+   nav ul {
+    position: absolute;
+    top: 70px;
+    right: 20px;        /* Que se pegue a la derecha */
+    left: auto;         /* Anula el 100% */
+    width: 220px;       /* 🔥 El tamaño de la cajita */
+    background: #f9a8d4; /* O el color que uses */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra flotante */
+  }
 
-
-  nav li {
-    margin: 5px 0;
+  nav ul li {
+    text-align: left;   /* Que los links se alineen a la izquierda */
+    padding: 10px;
   }
 }
+
 
