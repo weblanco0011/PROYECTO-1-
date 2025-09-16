@@ -165,7 +165,7 @@ a:hover {
   nav ul {
     display: none; /* Oculto por defecto */
     flex-direction: column;
-    background: pink;
+    background: rgb(255, 192, 203);
     position: absolute;
     top: 70px;
     right: 20px;
@@ -253,4 +253,5 @@ a:hover {
     padding: 8px;
   }
 }
+
 
