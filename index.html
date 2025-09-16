@@ -13,7 +13,11 @@
             <div class="header-content">
                 <h1>KarlaBlog</h1>
                 <img src="imagenes/foto.jpg" alt="foto" class="img-circular">
+                
+                <!-- 🔥 NUEVO: botón menú hamburguesa, se agregó para que en pantallas pequeñas
+                los usuarios puedan abrir o cerrar el menú de navegación de forma responsiva. -->
                 <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
                 <nav>
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
@@ -21,6 +25,8 @@
                         <li><a href="#diseño">Diseño</a></li>
                         <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
                         <li><a href="#contacto">Contacto</a></li>
+                        <!-- 🔥 NUEVO: enlace de descarga con atributo 'download' para bajar directamente
+                        el archivo PDF con la hoja de vida de Karla -->
                         <li><a href="docs/Hoja de Vida Karla Delgado.pdf" download="Hoja_de_Vida_Karla_Delgado.pdf">Descargar</a></li>
                     </ul>
                 </nav>
@@ -31,6 +37,8 @@
     <div class="container">
         <main>
             <section id="posts">
+                <!-- 🔥 NUEVO: se agregaron div contenedores con clases 'ini', 'desa', 'dise' 
+                para separar y dar mejor estilo individual a cada artículo -->
                 <article id="inicio">
                     <div class="ini">
                         <h2><a href="#post1">Los Frameworks CSS más Populares en 2024</a></h2>
@@ -40,7 +48,8 @@
                             <a href="#categoria-css">CSS</a>
                         </div>
                     </div>
-                    <!-- imagen con clase -->
+                    <!-- 🔥 NUEVO: las imágenes de artículos ahora tienen la clase 'article-img' 
+                    para poder darles un estilo uniforme desde CSS -->
                     <img src="imagenes/logos.jpg" alt="Logos de frameworks CSS" class="article-img">
                     <div style="padding: 20px;">
                         <p>En este artículo exploramos los frameworks CSS más utilizados en 2024, incluyendo Bootstrap, Tailwind CSS, y las nuevas alternativas que están ganando popularidad entre los desarrolladores.</p>
@@ -100,6 +109,8 @@
                     </div>
                 </article>
 
+                <!-- 🔥 NUEVO: artículo "Sobre Nosotros" agregado al HTML con texto personalizado,
+                etiquetas de misión/visión/servicios para dar más info sobre el blog -->
                 <article id="sobre-nosotros">
                     <div class="dise">
                         <h2><a href="#post3">Sobre Nosotros</a></h2>
@@ -187,6 +198,9 @@
     </p>
   </div>
 </footer>
+
+<!-- 🔥 NUEVO SCRIPT: suaviza el scroll cuando se hace clic en enlaces internos del menú
+evitando que se vaya “bruscamente” al contenido y dejando un espacio por la altura del header -->
 <script>
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', function (e) {
@@ -202,7 +216,11 @@
         });
       });
     });
-</script>
+  </script>
+
+<!-- 🔥 NUEVO SCRIPT: controla la apertura/cierre del menú hamburguesa en móviles.
+Cuando se presiona el botón, se agrega o quita la clase 'show'. Además, si se hace clic en
+cualquier enlace, se cierra automáticamente para mejor experiencia de usuario -->
 <script>
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('nav ul');
@@ -220,10 +238,6 @@
     });
   });
 </script>
+
 </body>
-
-
 </html>
-
-
-
