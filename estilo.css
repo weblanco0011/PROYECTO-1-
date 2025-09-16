@@ -226,22 +226,30 @@ a:hover {
     font-size: 1.2rem;
   }
 
-   nav ul {
+  nav ul {
+    display: none;               /* Oculto por defecto */
+    flex-direction: column;
     position: absolute;
     top: 70px;
-    right: 20px;        /* Que se pegue a la derecha */
-    left: auto;         /* Anula el 100% */
-    width: 220px;       /* 🔥 El tamaño de la cajita */
-    background: #f9a8d4; /* O el color que uses */
-    border-radius: 12px; /* Bordes redondeados */
+    right: 15px;
+    width: 200px;                /* 🔥 más pequeñito */
+    background: #f9a8d4;         /* color cajita */
+    border-radius: 12px;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra flotante */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
+
+  nav ul.show {
+    display: flex; /* 🔥 aparece al hacer clic */
   }
 
   nav ul li {
-    text-align: left;   /* Que los links se alineen a la izquierda */
-    padding: 10px;
+    text-align: left;
+    margin: 5px 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 8px;
   }
 }
-
-
