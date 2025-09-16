@@ -204,18 +204,26 @@
     });
 </script>
 <script>
-  // Botón hamburguesa
-  const toggleBtn = document.querySelector('.menu-toggle');
+  const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('nav ul');
+  const navLinks = document.querySelectorAll('nav a');
 
-  toggleBtn.addEventListener('click', () => {
+  // Abrir/cerrar menú al presionar el ícono
+  menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('show');
   });
-</script>
 
+  // Cerrar menú al hacer clic en un enlace
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+    });
+  });
+</script>
 </body>
 
 
 </html>
+
 
 
