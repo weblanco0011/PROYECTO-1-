@@ -22,7 +22,7 @@ body {
    Encabezado
    ========================= */
 header { 
-  background: rgb(255, 192, 203);
+  background: rgb(255, 192, 203); /* (Igual que antes) el encabezado mantiene el rosado */
   color: rgb(0, 0, 0); 
   padding: 1rem 0;
   position: sticky;
@@ -32,27 +32,27 @@ header {
 
 .header-content { 
   display: flex;
-  justify-content: space-between; /* Logo/título a la izq - menú a la der */
-  align-items: center;
-  flex-direction: row; /* 🔥 Siempre horizontal */
-  padding: 0 20px;
+  justify-content: space-between; /* (Nuevo respecto al anterior) ahora los elementos se distribuyen entre izquierda y derecha */
+  align-items: center;            /* (Nuevo) alinea verticalmente el logo, título y menú */
+  flex-direction: row;            /* (🔥 agregado) antes no estaba, asegura que siempre estén en horizontal */
+  padding: 0 20px;                /* (Nuevo) mete un espacio interno a los lados */
 }
 
 /* Agrupar logo y título */
 .header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex;       /* (Nuevo bloque) antes no existía, ahora agrupa logo + texto */
+  align-items: center; /* (Nuevo) centra verticalmente dentro del grupo */
+  gap: 10px;           /* (Nuevo) deja separación limpia entre logo y título */
 }
 
 nav ul {
-  display: flex;
+  display: flex; 
   list-style: none; 
-  gap: 20px;
+  gap: 20px;          /* (Cambio) antes se usaba margin-left en <li>, ahora se usa gap, más moderno y ordenado */
 }
 
 nav li { 
-  margin: 0;
+  margin: 0;          /* (Cambio) antes tenía margin-left:20px, ahora se elimina porque usamos gap */
 }
 
 nav a { 
@@ -73,7 +73,7 @@ main {
 article { 
   background: white;
   margin-bottom: 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* (Igual que antes, mantiene la sombra elegante) */
 }
 
 .article-meta { 
@@ -116,7 +116,7 @@ footer {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #333;
+  border: 3px solid #333; /* (Se mantiene igual que en la versión antigua) */
 }
 
 /* Enlaces */
@@ -148,12 +148,12 @@ a:hover {
 
 /* Botón hamburguesa */
 .menu-toggle {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #000;
+  display: none;          /* (🔥 Nuevo: antes no existía) se oculta por defecto */
+  font-size: 2rem;        /* (Nuevo) tamaño grande para que se vea bien en móvil */
+  background: none;       /* (Nuevo) sin fondo para que sea minimalista */
+  border: none;           /* (Nuevo) limpio, sin borde */
+  cursor: pointer;        /* (Nuevo) cambia cursor para mostrar que es clickeable */
+  color: #000;            /* (Nuevo) color negro para contraste */
 }
 
 /* =========================
@@ -163,33 +163,33 @@ a:hover {
 /* Tablets */
 @media (max-width: 992px) {
   nav ul {
-    display: none; /* Oculto por defecto */
-    flex-direction: column;
-    background: rgb(255, 192, 203);
+    display: none;         /* (🔥 Nuevo) se oculta el menú por defecto en pantallas medianas */
+    flex-direction: column;/* (Nuevo) en vez de horizontal, ahora en columna */
+    background: rgb(255, 192, 203); /* (Nuevo) el menú flotante hereda el rosado del header */
     position: absolute;
     top: 70px;
     right: 20px;
-    width: 220px;
+    width: 220px;          /* (Nuevo) cajita más angosta */
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* (Nuevo) da sensación de que está flotando */
   }
 
   nav ul.show {
-    display: flex; /* Aparece cuando se active */
+    display: flex; /* (🔥 Nuevo) aparece cuando se active con JS */
   }
 
   nav a {
-    padding: 10px;
+    padding: 10px; /* (Nuevo) más espacio en móvil */
     display: block;
   }
 
   .menu-toggle {
-    display: block; /* Visible en móvil/tablet */
+    display: block; /* (🔥 Nuevo) aparece el ícono hamburguesa en móviles/tablets */
   }
 
   main {
-    grid-template-columns: 1fr; /* todo en una sola columna */
+    grid-template-columns: 1fr; /* (Nuevo) contenido en una sola columna */
   }
 
   /* Orden en responsive */
@@ -210,48 +210,46 @@ a:hover {
 /* Celulares */
 @media (max-width: 600px) {
   h1 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem; /* (Nuevo) reduce tamaño del título */
   }
 
   .img-circular {
-    width: 60px;
+    width: 60px;       /* (Nuevo) imágenes más pequeñas */
     height: 60px;
   }
 
   article {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* (Nuevo) menos separación */
   }
 
   article h2 {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* (Nuevo) títulos más pequeños en móvil */
   }
 
   nav ul {
-    display: none;               /* Oculto por defecto */
+    display: none;                /* (Nuevo) oculto por defecto */
     flex-direction: column;
     position: absolute;
     top: 70px;
     right: 15px;
-    width: 200px;                /* 🔥 más pequeñito */
-    background: rgb(255, 192, 203);
-    border-radius: 12px;
+    width: 200px;                 /* (🔥 Ajustado) más pequeñito que en tablet */
+    background: rgb(255, 192, 203); /* (Nuevo) mismo color que header */
+    border-radius: 12px;          /* (Nuevo) bordes más redondeados */
     padding: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* (Nuevo) sombra más fuerte */
   }
 
   nav ul.show {
-    display: flex; /* 🔥 aparece al hacer clic */
+    display: flex; /* (🔥 Nuevo) aparece al hacer clic */
   }
 
   nav ul li {
-    text-align: left;
+    text-align: left; /* (Nuevo) links alineados a la izquierda */
     margin: 5px 0;
   }
 
   nav a {
-    display: block;
+    display: block; /* (Nuevo) ocupa todo el ancho para mejor clic */
     padding: 8px;
   }
 }
-
-
