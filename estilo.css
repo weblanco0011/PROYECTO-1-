@@ -1,123 +1,126 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-}
+        body {
+                 font-family: 'Segoe UI', sans-serif;
+                  line-height: 1.6;
+                 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .container { 
+                max-width: 1200px; 
+                margin: 0 auto; 
+                padding: 0 20px; 
+        }
 
-header {
-    background: rgb(255, 192, 203);
-    color: rgb(0, 0, 0);
-    padding: 1rem 0;
-    position: sticky;
-    z-index: 1000;
-    top: 0;
-}
+        header { 
+                background: rgb(255, 192, 203);
+                 color: rgb(0, 0, 0); 
+                 padding: 1rem 0;
+                 position: sticky;
+                 z-index: 1000;
+                 top: 0;
+                 } 
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .header-content { 
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
+        nav ul {
+                 display: flex;
+                  list-style: none; 
+                }
 
-nav li {
-    margin-left: 20px;
-}
+        nav li { 
+                margin-left: 20px;
+         }
 
-nav a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
+        nav a { color: rgb(0, 0, 0); 
+                text-decoration: none; 
+        }
 
-main {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    margin: 30px 0;
-}
+        main { display: grid; 
+                grid-template-columns: 2fr 1fr;
+                 gap: 30px;
+                  margin: 30px 0; }
 
-article {
-    background: white;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+        article { background: white;
+                 margin-bottom: 30px;
+                  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                 }
 
-.article-meta {
-    color: #666;
-    font-size: 0.9em;
-    margin: 10px 0;
-}
+        .article-meta { color: #666;
+                 font-size: 0.9em; 
+                 margin: 10px 0;
+                 }
 
-aside {
-    background: #f8f9fa;
-    padding: 20px;
-}
+        aside {
+                 background: #f8f9fa; 
+                padding: 20px;
+         }
 
-footer {
-    background: rgb(255, 192, 203);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 20px 0;
-}
+        footer {
+         background: rgb(255, 192, 203); 
+        color: rgb(0, 0, 0); 
+        text-align: center; 
+        padding: 20px 0; }
 
-.search-form {
-    margin: 20px 0;
-}
+        .search-form { 
+                margin: 20px 0; 
+        }
 
-.tags {
-    margin: 10px 0;
-}
+        .tags { 
+                margin: 10px 0;
+         }
 
-.tag {
-    background: rgb(255, 105, 180);
-    color: white;
-    padding: 3px 8px;
-    margin: 2px;
-    font-size: 0.8em;
-}
+        .tag { 
+                background: rgb(255, 105, 180) ; 
+                color: white;
+                 padding: 3px 8px;
+                  margin: 2px;
+                  font-size: 0.8em; }
 
-.img-circular {
-    width: 80px; /* Tamaño de la imagen */
-    height: 80px; /* Igual al width para que sea un círculo perfecto */
-    border-radius: 50%; /* Esto la hace circular */
-    object-fit: cover; /* Recorta la imagen para que no se deforme */
-    border: 3px solid #333; /* (Opcional) Borde decorativo */
-}
+        .img-circular {
+       width: 80px;        /* Tamaño de la imagen */
+       height: 80px;       /* Igual al width para que sea un círculo perfecto */
+       border-radius: 50%;  /* Esto la hace circular */
+       object-fit: cover;   /* Recorta la imagen para que no se deforme */
+       border: 3px solid #333; /* (Opcional) Borde decorativo */
+       }
 
-a {
-    color: #c71585;
-    text-decoration: none;
-}
+       a {
+    color: #c71585;          /* Cambia 'purple' por el color que quieras */
+    text-decoration: none;  /* Quita el subrayado si no lo quieres */
+    }
 
-a:hover {
-    color: hotpink;
-}
+   a:hover {
+    color: hotpink;         /* Color al pasar el mouse por encima */
+   }
 
-/* Cuadritos de encabezado en artículos */
-.ini,
-.dise,
-.desa {
-    background: rgb(255, 192, 203);
-    color: rgb(0, 0, 0);
-    padding: 1rem 0;
-}
+  /* clase para el cuadrito rosadito del bloque */
+   .ini {
+         background: rgb(255, 192, 203);
+                 color: rgb(0, 0, 0); 
+                 padding: 1rem 0; 
+   }
 
-/* 👇 NUEVO: estilo para imágenes de los artículos */
+   .dise {
+   background: rgb(255, 192, 203);
+                 color: rgb(0, 0, 0); 
+                 padding: 1rem 0;
+   }
+
+   .desa{
+        background: rgb(255, 192, 203);
+                 color: rgb(0, 0, 0); 
+                 padding: 1rem 0;
+   }
+
+
+
+   /*  estilo para imágenes de los artículos */
 .post-img {
     display: block;
     max-width: 100%;
@@ -133,4 +136,61 @@ a:hover {
     height: auto;
     margin: 0 auto;
     border-radius: 8px;
+}
+
+/* =========================
+   🔥 Responsive Design
+   ========================= */
+@media (max-width: 992px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+  }
+
+  main {
+    grid-template-columns: 1fr; /* Artículos y aside uno debajo del otro */
+  }
+
+  aside {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem; /* Encabezado más pequeño */
+  }
+
+  .img-circular {
+    width: 60px;
+    height: 60px;
+  }
+
+  article {
+    margin-bottom: 20px;
+  }
+
+  article h2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column; /* Menú en columna */
+    align-items: center;
+  }
+
+  nav li {
+    margin: 5px 0;
+  }
 }
