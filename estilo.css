@@ -139,13 +139,12 @@ a:hover {
   color: #000;
 }
 
-/* Tablets y móviles */
+/* Tablets */
 @media (max-width: 992px) {
   .header-content {
-    flex-direction: row;  /* 🔥 siempre en fila */
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    text-align: left;
+    text-align: center;
   }
 
   nav ul {
@@ -153,7 +152,7 @@ a:hover {
     flex-direction: column;
     background: pink;
     position: absolute;
-    top: 80px; /* justo debajo del header */
+    top: 80px; 
     right: 20px;
     width: 220px;
     padding: 10px;
@@ -180,15 +179,46 @@ a:hover {
 
   /* Orden en responsive */
   article {
-    order: 1;
+    order: 1; /* primero los artículos */
   }
 
   aside {
-    order: 2;
+    order: 2; /* después aside */
     margin-top: 20px;
   }
 
   footer {
-    order: 3;
+    order: 3; /* de último footer */
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem; 
+  }
+
+  .img-circular {
+    width: 60px;
+    height: 60px;
+  }
+
+  article {
+    margin-bottom: 20px;
+  }
+
+  article h2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    width: 100%; 
+    right: 0;
+    left: 0;
+    top: 70px;
+  }
+
+  nav li {
+    margin: 5px 0;
   }
 }
